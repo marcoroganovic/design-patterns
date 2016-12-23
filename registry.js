@@ -15,7 +15,6 @@ var Registry = Registry || (function() {
     return hasOwnProperty.call(this._values, name) ? this._values[name] : this._default;
   }
 
-
   return Registry;
 
 })();
