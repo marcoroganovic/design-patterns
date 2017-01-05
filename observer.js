@@ -22,7 +22,7 @@ var Observer = Observer || (function() {
 
   Observer.prototype.flush = function(eventType) {
     if(this.handlers[eventType]) {
-      this.handlers[eventType] = [];
+      delete this.handlers[eventType];
     }
   }
 
