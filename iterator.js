@@ -5,6 +5,10 @@ class Iterator {
   }
 
   constructor(source) {
+    if(!Array.isArray(source)) {
+      throw new Error(`Expected array, got ${typeof source}`)
+    }
+
     this.source = source;
     this.index = -1;
     this.length = source.length
