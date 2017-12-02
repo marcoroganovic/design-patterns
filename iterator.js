@@ -43,12 +43,16 @@ class Iterator {
     this.index = -1;
   }
 
+
+  each(fn) {
+    while(this.hasNext()) {
+      fn(this.next().value);
+    }
+  }
 }
 
 
 
 /* -- Demo -- */
 const iterator = Iterator.create([1, 2, 3]);
-while(iterator.hasNext()) {
-  console.log(iterator.next());
-}
+iterator.each((val) => console.log(val));
